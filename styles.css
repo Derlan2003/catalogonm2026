@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    color: #e5e5e5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.97);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #c9a84c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #999;
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.nav-btn:hover {
+    color: #e5e5e5;
+}
+
+.nav-btn.active {
+    color: #c9a84c;
+    border-bottom-color: #c9a84c;
+}
+
+.hero {
+    margin-top: 56px;
+    padding: 48px 32px;
+    background: linear-gradient(to bottom, #1a2a3a, #0f0f0f);
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Poppins';
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.hero h1 span {
+    color: #c9a84c;
+}
+
+.hero p {
+    color: #999;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.stat-number {
+    font-family: 'Bebas Neue';
+    font-size: 48px;
+    color: #c9a84c;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.search-section {
+    background: #1a1a1a;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    padding: 24px 32px;
+}
+
+.search-container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 100%;
+    background: #0f0f0f;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 4px;
+    color: #e5e5e5;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #c9a84c;
+}
+
+.catalog {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 32px;
+}
+
+.catalog-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.catalog-title {
+    font-family: 'Bebas Neue';
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c9a84c;
+}
+
+.catalog-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(201, 168, 76, 0.2), transparent);
+    min-width: 20px;
+}
+
+.catalog-count {
+    background: #c9a84c;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 2px;
+}
+
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.vehicle-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(201, 168, 76, 0.1);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.vehicle-card:hover {
+    border-color: #c9a84c;
+    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.15);
+    transform: translateY(-4px);
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 200px;
+    background: #0f0f0f;
+    overflow: hidden;
+    position: relative;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vehicle-badge {
+    position: absolute;
+    top: 12px;
+    right: -24px;
+    background: #e03535;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 32px;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.vehicle-info {
+    padding: 20px;
+}
+
+.vehicle-brand {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c9a84c;
+    margin-bottom: 8px;
+}
+
+.vehicle-model {
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.vehicle-price {
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    color: #c9a84c;
+    margin-bottom: 12px;
+}
+
+.vehicle-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.spec {
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    padding-bottom: 8px;
+}
+
+.spec-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 4px;
+}
+
+.spec-value {
+    color: #e5e5e5;
+    font-weight: 500;
+}
+
+footer {
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+    padding: 48px 32px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-logo {
+    font-family: 'Bebas Neue';
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #c9a84c;
+    margin-bottom: 8px;
+}
+
+.footer-text {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog {
+        padding: 24px 16px;
+    }
+
+    nav {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding: 32px 16px;
+    }
+
+    .search-section {
+        padding: 16px;
+    }
+}
+
+/* SLIDER */
+.slider-wrap { position: relative; overflow: hidden; }
+.slider-track { display: flex; height: 100%; transition: transform 0.35s ease; }
+.slider-track img { min-width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); border: none; color: #fff; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; z-index: 10; opacity: 0; transition: all 0.2s; }
+.vehicle-card:hover .slider-btn { opacity: 1; }
+.slider-btn:hover { background: #c9a84c; color: #000; }
+.slider-prev { left: 8px; }
+.slider-next { right: 8px; }
+.slider-dots { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 10; }
+.slider-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.4); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
+.slider-dot.active { background: #c9a84c; }
+.classic-badge { position: absolute; top: 12px; left: -24px; background: #c9a84c; color: #000; font-size: 11px; font-weight: bold; padding: 4px 32px; transform: rotate(-45deg); z-index: 10; }
+
+/* WHATSAPP */
+.vehicle-whatsapp { display: block; margin-top: 12px; background: #25D366; color: #fff; text-align: center; padding: 10px; font-size: 13px; font-weight: bold; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
+.vehicle-whatsapp:hover { background: #1ebe5d; }
+
+/* DESC */
+.vehicle-desc { font-size: 12px; color: #999; font-style: italic; margin-bottom: 12px; border-left: 2px solid #c9a84c; padding-left: 10px; line-height: 1.5; }
+
+/* MODAL */
+.modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 500; align-items: center; justify-content: center; padding: 20px; }
+.modal-bg.open { display: flex; }
+.modal { background: #1a1a1a; border: 1px solid rgba(201,168,76,0.2); max-width: 720px; width: 100%; position: relative; max-height: 90vh; overflow-y: auto; }
+.modal-slider { position: relative; width: 100%; height: 300px; overflow: hidden; background: #0f0f0f; }
+.modal-track { display: flex; height: 100%; transition: transform 0.35s ease; }
+.modal-track img { min-width: 100%; height: 100%; object-fit: cover; flex-shrink: 0; }
+.modal-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
+.modal-btn:hover { background: #c9a84c; color: #000; }
+.modal-prev { left: 12px; }
+.modal-next { right: 12px; }
+.modal-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 10; }
+.modal-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
+.modal-dot.active { background: #c9a84c; }
+.modal-close { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); border: 1px solid rgba(201,168,76,0.2); color: #999; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+.modal-close:hover { background: #c9a84c; color: #000; }
+.modal-body { padding: 24px; }
+.modal-brand { font-size: 11px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; color: #c9a84c; margin-bottom: 4px; }
+.modal-model { font-family: 'Bebas Neue'; font-size: 32px; color: #fff; margin-bottom: 6px; }
+.modal-price { font-family: 'Bebas Neue'; font-size: 24px; color: #c9a84c; margin-bottom: 16px; }
+.modal-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.mspec { border-left: 2px solid #c9a84c; padding-left: 10px; }
+.mspec-k { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #999; margin-bottom: 2px; }
+.mspec-v { font-size: 15px; font-weight: 600; color: #e5e5e5; }
+.modal-desc { font-size: 13px; color: #999; font-style: italic; border-left: 2px solid #c9a84c; padding-left: 12px; margin-bottom: 20px; line-height: 1.6; }
+.modal-cta { display: block; background: #25D366; color: #fff; text-align: center; padding: 12px; font-weight: bold; font-size: 14px; text-decoration: none; border-radius: 4px; transition: background 0.2s; }
+.modal-cta:hover { background: #1ebe5d; }

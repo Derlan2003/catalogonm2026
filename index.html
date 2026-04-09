@@ -1,484 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neguinho Motors — Catálogo de Veículos</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{--black:#0a0a0a;--dark:#111318;--card:#16191f;--border:#252932;--gold:#c9a84c;--gold-light:#e8c96b;--silver:#9ba3b0;--white:#f0f2f5;--red:#e03535;--green:#2ea87e;--blue:#3a7bd5;--nav-h:56px;}
-  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-  body{background:var(--black);color:var(--white);font-family:"Barlow",sans-serif;min-height:100vh;overflow-x:hidden;}
-
-  nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(10,10,10,0.97);border-bottom:1px solid var(--border);display:flex;align-items:center;z-index:200;backdrop-filter:blur(12px);}
-  .nav-inner{max-width:1400px;margin:0 auto;width:100%;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-  .nav-logo{text-decoration:none;}
-  .nav-logo img{height:38px;width:auto;}
-  .nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
-  .nav-links a{display:block;padding:8px 13px;font-family:"Barlow Condensed",sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;transition:color .2s;border-bottom:2px solid transparent;}
-  .nav-links a:hover,.nav-links a.active{color:var(--gold);border-bottom-color:var(--gold);}
-  .nav-search-wrap{position:relative;display:flex;align-items:center;}
-  .nav-search-wrap input{background:rgba(255,255,255,0.05);border:1px solid var(--border);color:var(--white);font-family:"Barlow",sans-serif;font-size:13px;padding:7px 34px 7px 14px;border-radius:2px;outline:none;width:200px;transition:border-color .2s,width .3s;}
-  .nav-search-wrap input::placeholder{color:var(--silver);opacity:.6;}
-  .nav-search-wrap input:focus{border-color:var(--gold);width:250px;}
-  .nav-search-wrap .si{position:absolute;right:10px;color:var(--silver);font-size:13px;pointer-events:none;}
-  .hamburger{display:none;background:none;border:none;color:var(--gold);font-size:24px;cursor:pointer;padding:4px;}
-  .mobile-menu{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--dark);border-bottom:1px solid var(--border);padding:16px 24px;gap:4px;z-index:199;flex-direction:column;}
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{display:block;padding:10px 4px;font-family:"Barlow Condensed",sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--silver);text-decoration:none;border-bottom:1px solid var(--border);}
-
-  header{position:relative;padding:100px 40px 50px;background:linear-gradient(135deg,#0a0a0a 0%,#111318 50%,#1a1f2a 100%);border-bottom:1px solid var(--border);overflow:hidden;}
-  header::before{content:"";position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 70%);pointer-events:none;}
-  header::after{content:"AUTO";position:absolute;bottom:-30px;right:20px;font-family:"Bebas Neue",sans-serif;font-size:160px;color:rgba(201,168,76,.04);letter-spacing:10px;pointer-events:none;user-select:none;}
-  .header-inner{max-width:1400px;margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;position:relative;z-index:1;}
-  .logo-tag{font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:600;letter-spacing:4px;color:var(--gold);text-transform:uppercase;}
-  .logo-title{font-family:"Bebas Neue",sans-serif;font-size:72px;line-height:.9;color:var(--white);letter-spacing:2px;}
-  .logo-title span{color:var(--gold);}
-  .logo-sub{font-size:13px;color:var(--silver);font-weight:300;letter-spacing:1px;margin-top:4px;}
-  .stats-row{display:flex;gap:32px;align-items:flex-end;padding-bottom:8px;}
-  .stat-num{font-family:"Bebas Neue",sans-serif;font-size:42px;color:var(--gold);line-height:1;}
-  .stat-label{font-size:10px;letter-spacing:2px;color:var(--silver);text-transform:uppercase;font-weight:500;margin-top:2px;text-align:center;}
-
-  .search-section{background:var(--dark);border-bottom:1px solid var(--border);padding:20px 40px;}
-  .search-inner{max-width:1400px;margin:0 auto;}
-  .search-wrap{position:relative;display:flex;align-items:center;max-width:720px;margin:0 auto;}
-  .search-wrap .sicon{position:absolute;left:18px;font-size:18px;pointer-events:none;z-index:2;}
-  .search-input{width:100%;background:rgba(255,255,255,0.05);border:1.5px solid var(--border);color:var(--white);font-family:"Barlow",sans-serif;font-size:16px;padding:14px 48px 14px 52px;border-radius:3px;outline:none;transition:border-color .25s,background .25s,box-shadow .25s;}
-  .search-input::placeholder{color:var(--silver);opacity:.55;}
-  .search-input:focus{border-color:var(--gold);background:rgba(201,168,76,.04);box-shadow:0 0 0 3px rgba(201,168,76,.08);}
-  .search-clear{position:absolute;right:14px;background:none;border:none;color:var(--silver);font-size:16px;cursor:pointer;padding:4px 6px;border-radius:50%;transition:color .2s;display:none;line-height:1;}
-  .search-clear.visible{display:block;}
-  .search-info{text-align:center;margin-top:10px;font-family:"Barlow Condensed",sans-serif;font-size:13px;letter-spacing:1.5px;color:var(--silver);text-transform:uppercase;min-height:18px;}
-  .search-info span{color:var(--gold);}
-
-  .filter-bar{background:var(--dark);border-bottom:1px solid var(--border);padding:14px 40px;position:sticky;top:var(--nav-h);z-index:100;}
-  .filter-inner{max-width:1400px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
-  .filter-label{font-size:11px;letter-spacing:2px;color:var(--silver);text-transform:uppercase;font-weight:600;margin-right:4px;}
-  .filter-btn{background:transparent;border:1px solid var(--border);color:var(--silver);padding:5px 14px;border-radius:2px;font-family:"Barlow Condensed",sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
-  .filter-btn:hover,.filter-btn.active{background:var(--gold);border-color:var(--gold);color:var(--black);}
-
-  .catalog-section{max-width:1400px;margin:0 auto;padding:48px 40px;}
-  .section-divider{display:flex;align-items:center;gap:16px;margin-bottom:32px;}
-  .section-divider h2{font-family:"Bebas Neue",sans-serif;font-size:28px;letter-spacing:3px;color:var(--gold);white-space:nowrap;}
-  .divider-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border),transparent);}
-  .count-badge{background:var(--gold);color:var(--black);font-family:"Barlow Condensed",sans-serif;font-size:12px;font-weight:700;padding:2px 8px;border-radius:2px;margin-left:8px;}
-  .cars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;}
-
-  /* SLIDER */
-  .slider-wrap{position:relative;width:100%;height:185px;overflow:hidden;background:#0d1017;}
-  .slider-track{display:flex;height:100%;transition:transform 0.35s ease;}
-  .slider-track img{min-width:100%;height:100%;object-fit:cover;flex-shrink:0;filter:brightness(.88) saturate(.85);}
-  .car-card:hover .slider-track img{filter:brightness(1) saturate(1.1);}
-  .slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;opacity:0;}
-  .car-card:hover .slider-btn{opacity:1;}
-  .slider-btn:hover{background:var(--gold);color:var(--black);}
-  .slider-prev{left:8px;}
-  .slider-next{right:8px;}
-  .slider-dots{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:10;}
-  .slider-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:background .2s;border:none;padding:0;}
-  .slider-dot.active{background:var(--gold);}
-
-  /* CARD */
-  .car-card{background:var(--card);border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;animation:fadeUp .5s ease both;cursor:pointer;}
-  .car-card:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 12px 40px rgba(201,168,76,.14);z-index:2;}
-  .car-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .25s;z-index:3;}
-  .car-card:hover::before{opacity:1;}
-  .card-overlay{position:absolute;bottom:185px;left:0;right:0;background:linear-gradient(transparent,rgba(201,168,76,.18));padding:14px 22px;display:flex;align-items:center;justify-content:flex-end;opacity:0;transition:opacity .25s;z-index:4;pointer-events:none;height:40px;}
-  .car-card:hover .card-overlay{opacity:1;}
-  .link-pill{background:var(--gold);color:var(--black);font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;padding:5px 14px;text-transform:uppercase;}
-  .card-body{padding:20px 22px 18px;}
-  .card-brand-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
-  .card-brand{font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
-  .card-year{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold-light);font-family:"Barlow Condensed",sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;padding:3px 10px;border-radius:1px;}
-  .card-model{font-family:"Bebas Neue",sans-serif;font-size:26px;line-height:1.1;letter-spacing:1px;color:var(--white);margin-bottom:10px;}
-  .card-price{font-family:"Bebas Neue",sans-serif;font-size:20px;color:var(--gold);margin-bottom:10px;}
-  .card-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
-  .spec-key{font-size:9px;letter-spacing:2px;color:var(--silver);text-transform:uppercase;font-weight:600;}
-  .spec-val{font-family:"Barlow Condensed",sans-serif;font-size:14px;font-weight:600;color:var(--white);letter-spacing:.5px;}
-  .cdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid rgba(255,255,255,.15);}
-  .card-foot{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid var(--border);}
-  .fuel-tag{font-size:10px;letter-spacing:1.5px;color:var(--silver);text-transform:uppercase;font-family:"Barlow Condensed",sans-serif;font-weight:600;display:flex;align-items:center;gap:5px;}
-  .fuel-tag::before{content:"⬡";color:var(--green);font-size:12px;}
-  .fuel-tag.diesel::before{color:var(--blue);}
-  .fuel-tag.gas::before{color:var(--red);}
-  .badge-import{background:rgba(58,123,213,.15);border:1px solid rgba(58,123,213,.3);color:#6ba3e8;font-family:"Barlow Condensed",sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 8px;text-transform:uppercase;}
-  .badge-classic{position:absolute;top:148px;right:-22px;background:var(--red);color:#fff;font-family:"Barlow Condensed",sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;padding:4px 30px;transform:rotate(45deg);text-transform:uppercase;z-index:5;pointer-events:none;}
-  .badge-vendido-wrap{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.65);display:flex;align-items:center;justify-content:center;z-index:6;pointer-events:none;}
-  .badge-vendido-txt{background:var(--red);color:#fff;font-family:"Bebas Neue",sans-serif;font-size:32px;letter-spacing:4px;padding:8px 24px;border:2px solid rgba(255,255,255,0.3);}
-
-  /* MODAL */
-  .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:500;align-items:center;justify-content:center;padding:20px;}
-  .modal-bg.open{display:flex;}
-  .modal{background:var(--dark);border:1px solid var(--border);max-width:720px;width:100%;position:relative;animation:fadeUp .3s ease;max-height:90vh;overflow-y:auto;}
-  .modal-slider{position:relative;width:100%;height:320px;overflow:hidden;background:#0d1017;}
-  .modal-track{display:flex;height:100%;transition:transform 0.35s ease;}
-  .modal-track img{min-width:100%;height:100%;object-fit:cover;flex-shrink:0;}
-  .modal-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);border:none;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;}
-  .modal-btn:hover{background:var(--gold);color:var(--black);}
-  .modal-prev{left:12px;}
-  .modal-next{right:12px;}
-  .modal-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10;}
-  .modal-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:background .2s;border:none;padding:0;}
-  .modal-dot.active{background:var(--gold);}
-  .modal-body{padding:28px 32px 32px;}
-  .modal-brand{font-family:"Barlow Condensed",sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
-  .modal-model{font-family:"Bebas Neue",sans-serif;font-size:38px;letter-spacing:2px;line-height:1;color:var(--white);margin-bottom:6px;}
-  .modal-price{font-family:"Bebas Neue",sans-serif;font-size:28px;color:var(--gold);margin-bottom:20px;}
-  .modal-specs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;}
-  .mspec{border-left:2px solid var(--gold);padding-left:12px;}
-  .mspec-k{font-size:9px;letter-spacing:2px;color:var(--silver);text-transform:uppercase;font-weight:600;margin-bottom:3px;}
-  .mspec-v{font-family:"Barlow Condensed",sans-serif;font-size:16px;font-weight:600;color:var(--white);}
-  .modal-desc{font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:24px;font-style:italic;border-left:3px solid var(--gold);padding-left:14px;}
-  .modal-close{position:absolute;top:14px;right:14px;background:rgba(0,0,0,.5);border:1px solid var(--border);color:var(--silver);width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:all .2s;border-radius:50%;z-index:10;}
-  .modal-close:hover{background:var(--gold);color:var(--black);border-color:var(--gold);}
-  .modal-cta{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);font-family:"Barlow Condensed",sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 28px;text-decoration:none;transition:background .2s;border:none;cursor:pointer;}
-  .modal-cta:hover{background:var(--gold-light);}
-
-  .page-footer{border-top:1px solid var(--border);padding:40px;text-align:center;margin-top:20px;}
-  .footer-logo{font-family:"Bebas Neue",sans-serif;font-size:32px;letter-spacing:4px;color:var(--gold);}
-  .footer-text{font-size:12px;color:var(--silver);letter-spacing:1px;margin-top:8px;}
-  .no-results{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--silver);font-family:"Barlow Condensed",sans-serif;font-size:18px;letter-spacing:2px;text-transform:uppercase;}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-
-  @media(max-width:900px){.nav-links{display:none;}.hamburger{display:block;}.nav-search-wrap{display:none;}}
-  @media(max-width:768px){header{padding:80px 20px 40px;}.logo-title{font-size:48px;}.search-section,.filter-bar{padding:12px 20px;}.catalog-section{padding:32px 20px;}.cars-grid{grid-template-columns:1fr;}.nav-inner{padding:0 20px;}.modal-specs{grid-template-columns:1fr 1fr;}.modal-body{padding:20px;}.modal-slider{height:220px;}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neguinho Motors - Catalogo de Veiculos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">NEGUINHO MOTORS</div>
+            <div class="nav-links">
+                <button class="nav-btn active" data-filter="todos">Catalogo</button>
+                <button class="nav-btn" data-filter="volkswagen">Volkswagen</button>
+                <button class="nav-btn" data-filter="chevrolet">Chevrolet</button>
+                <button class="nav-btn" data-filter="ford">Ford</button>
+                <button class="nav-btn" data-filter="fiat">Fiat</button>
+                <button class="nav-btn" data-filter="mitsubishi">Mitsubishi</button>
+                <button class="nav-btn" data-filter="hyundai">Hyundai</button>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="nav-logo"><img src="logooficial.webp" alt="Neguinho Motors"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#" onclick="setFilter('todos',this);return false;" class="active">Catalogo</a></li>
-      <li><a href="#" onclick="setFilter('volkswagen',this);return false;">Volkswagen</a></li>
-      <li><a href="#" onclick="setFilter('chevrolet',this);return false;">Chevrolet / GM</a></li>
-      <li><a href="#" onclick="setFilter('ford',this);return false;">Ford</a></li>
-      <li><a href="#" onclick="setFilter('fiat',this);return false;">Fiat</a></li>
-      <li><a href="#" onclick="setFilter('mitsubishi',this);return false;">Mitsubishi</a></li>
-      <li><a href="#" onclick="setFilter('classico',this);return false;">Classicos</a></li>
-    </ul>
-    <div class="nav-search-wrap">
-      <input type="text" placeholder="Buscar veiculo..." oninput="doSearch(this.value)" id="navSearch">
-      <span class="si">&#x1F50D;</span>
+    <section class="hero">
+        <div style="max-width: 1280px; margin: 0 auto;">
+            <h1><span>2026</span> CATALOGO</h1>
+            <p>Veiculos selecionados com qualidade garantida</p>
+            <div class="hero-stats">
+                <div><div class="stat-number">42</div><div class="stat-label">Veiculos</div></div>
+                <div><div class="stat-number">11</div><div class="stat-label">Marcas</div></div>
+                <div><div class="stat-number">20+</div><div class="stat-label">Anos</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar por modelo, marca, cor ou ano...">
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="catalog-header">
+            <h2 class="catalog-title">ESTOQUE DISPONIVEL</h2>
+            <div class="catalog-divider"></div>
+            <span class="catalog-count" id="vehicleCount">42</span>
+        </div>
+        <div class="vehicles-grid" id="vehiclesGrid"></div>
+    </section>
+
+    <div class="modal-bg" id="modalBg">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+            <div class="modal-slider">
+                <div class="modal-track" id="modalTrack"></div>
+                <button class="modal-btn modal-prev" onclick="modalSlide(-1)">&#8249;</button>
+                <button class="modal-btn modal-next" onclick="modalSlide(1)">&#8250;</button>
+                <div class="modal-dots" id="modalDots"></div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-brand" id="mBrand"></div>
+                <div class="modal-model" id="mModel"></div>
+                <div class="modal-price" id="mPrice"></div>
+                <div class="modal-specs" id="mSpecs"></div>
+                <div class="modal-desc" id="mDesc" style="display:none"></div>
+                <a class="modal-cta" id="mCta" href="#" target="_blank">&#x1F4F2; Consultar via WhatsApp</a>
+            </div>
+        </div>
     </div>
-    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
-  </div>
-</nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#" onclick="setFilter('todos');closeMobile();return false;">Todos</a>
-  <a href="#" onclick="setFilter('volkswagen');closeMobile();return false;">Volkswagen</a>
-  <a href="#" onclick="setFilter('chevrolet');closeMobile();return false;">Chevrolet / GM</a>
-  <a href="#" onclick="setFilter('ford');closeMobile();return false;">Ford</a>
-  <a href="#" onclick="setFilter('fiat');closeMobile();return false;">Fiat</a>
-  <a href="#" onclick="setFilter('mitsubishi');closeMobile();return false;">Mitsubishi</a>
-  <a href="#" onclick="setFilter('outros');closeMobile();return false;">Outros</a>
-  <a href="#" onclick="setFilter('classico');closeMobile();return false;">Classicos</a>
-</div>
+    <footer>
+        <div class="footer-logo">NEGUINHO MOTORS</div>
+        <p class="footer-text">2025 - Neguinho Motors - Todos os direitos reservados</p>
+    </footer>
 
-<header>
-  <div class="header-inner">
-    <div>
-      <div class="logo-tag">Catalogo Completo</div>
-      <div class="logo-title"><span>2026</span></div>
-      <div class="logo-sub">Veiculos selecionados com qualidade garantida</div>
-    </div>
-    <div class="stats-row">
-      <div><div class="stat-num">43</div><div class="stat-label">Veiculos</div></div>
-      <div><div class="stat-num">12</div><div class="stat-label">Marcas</div></div>
-      <div><div class="stat-num">50+</div><div class="stat-label">Anos</div></div>
-    </div>
-  </div>
-</header>
-
-<div class="search-section">
-  <div class="search-inner">
-    <div class="search-wrap">
-      <span class="sicon">&#x1F50D;</span>
-      <input type="text" id="searchMain" class="search-input" placeholder="Buscar por modelo, marca, cor ou ano..." oninput="doSearch(this.value)" autocomplete="off">
-      <button class="search-clear" id="searchClear" onclick="clearSearch()">&#x2715;</button>
-    </div>
-    <div class="search-info" id="searchInfo"></div>
-  </div>
-</div>
-
-<div class="filter-bar" id="catalogo">
-  <div class="filter-inner">
-    <span class="filter-label">Filtrar:</span>
-    <button class="filter-btn active" onclick="setFilter('todos',this)">Todos</button>
-    <button class="filter-btn" onclick="setFilter('volkswagen',this)">VW</button>
-    <button class="filter-btn" onclick="setFilter('chevrolet',this)">Chevrolet / GM</button>
-    <button class="filter-btn" onclick="setFilter('ford',this)">Ford</button>
-    <button class="filter-btn" onclick="setFilter('fiat',this)">Fiat</button>
-    <button class="filter-btn" onclick="setFilter('mitsubishi',this)">Mitsubishi</button>
-    <button class="filter-btn" onclick="setFilter('outros',this)">Outros</button>
-    <button class="filter-btn" onclick="setFilter('classico',this)">Classicos</button>
-    <button class="filter-btn" onclick="setFilter('vendido',this)">Vendidos</button>
-  </div>
-</div>
-
-<section class="catalog-section">
-  <div class="section-divider">
-    <h2>ESTOQUE DISPONIVEL</h2>
-    <div class="divider-line"></div>
-    <span id="countBadge" class="count-badge">43</span>
-  </div>
-  <div class="cars-grid" id="carsGrid"></div>
-</section>
-
-<div class="modal-bg" id="modalBg" onclick="closeModalClick(event)">
-  <div class="modal" id="modal">
-    <button class="modal-close" onclick="closeModal()">&#x2715;</button>
-    <div class="modal-slider" id="modalSlider">
-      <div class="modal-track" id="modalTrack"></div>
-      <button class="modal-btn modal-prev" onclick="modalSlide(-1)">&#8249;</button>
-      <button class="modal-btn modal-next" onclick="modalSlide(1)">&#8250;</button>
-      <div class="modal-dots" id="modalDots"></div>
-    </div>
-    <div class="modal-body">
-      <div class="modal-brand" id="mBrand"></div>
-      <div class="modal-model" id="mModel"></div>
-      <div class="modal-price" id="mPrice"></div>
-      <div class="modal-specs" id="mSpecs"></div>
-      <div class="modal-desc" id="mDesc" style="display:none"></div>
-      <a id="mCta" class="modal-cta" href="#" target="_blank">&#x1F4F2; Consultar via WhatsApp</a>
-    </div>
-  </div>
-</div>
-
-<footer class="page-footer">
-  <div class="footer-logo">NEGUINHO MOTORS</div>
-  <p class="footer-text">2025 - Neguinho Motors - Todos os direitos reservados</p>
-</footer>
-
-<script>
-var vehicles = [
-  {brand:"BMW",bk:"outros",model:"X1 SDRIVE 1.8I",year:"2011/2011",color:"Preta",hex:"#1a1a1a",fuel:"gasolina",extra:"Vendido",classic:false,img:"imagens/bmwx1.webp",folder:"bmwx1",price:"Vendido",cambio:"",desc:"",photos:["imagens/bmwx1/1.webp","imagens/bmwx1/2.webp","imagens/bmwx1/3.webp","imagens/bmwx1/4.webp","imagens/bmwx1/5.webp","imagens/bmwx1/6.webp","imagens/bmwx1/7.webp","imagens/bmwx1/8.webp"]},
-  {brand:"Willys",bk:"outros",model:"OVERLAND",year:"1951/1951",color:"Verde",hex:"#4a7c59",fuel:"gasolina",extra:null,classic:true,img:"imagens/willys.webp",folder:"willys",price:"R$50.000,00",cambio:"Manual",desc:"",photos:["imagens/willys/1.webp","imagens/willys/2.webp","imagens/willys/3.webp","imagens/willys/4.webp","imagens/willys/5.webp","imagens/willys/6.webp","imagens/willys/7.webp","imagens/willys/8.webp"]},
-  {brand:"Chevrolet",bk:"chevrolet",model:"AGILE LTZ",year:"2012/2013",color:"Cinza",hex:"#9ba3b0",fuel:"flex",extra:null,classic:false,img:"imagens/agile.webp",folder:"agil",price:"R$38.500,00",cambio:"Manual",desc:"",photos:["imagens/agil/1.webp","imagens/agil/2.webp","imagens/agil/3.webp","imagens/agil/4.webp","imagens/agil/5.webp","imagens/agil/6.webp","imagens/agil/7.webp","imagens/agil/8.webp"]},
-  {brand:"Chevrolet",bk:"chevrolet",model:"ASTRA ADVANTAGE 2.0",year:"2011/2011",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/astra.webp",folder:"astra",price:"R$40.000,00",cambio:"Manual",desc:"",photos:["imagens/astra/1.webp","imagens/astra/2.webp","imagens/astra/3.webp","imagens/astra/4.webp","imagens/astra/5.webp","imagens/astra/6.webp","imagens/astra/7.webp","imagens/astra/8.webp"]},
-  {brand:"Chevrolet",bk:"chevrolet",model:"CRUZE LT NB",year:"2012/2012",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/cruze.webp",folder:"cruze",price:"R$55.000,00",cambio:"Automatico",desc:"",photos:["imagens/cruze/1.webp","imagens/cruze/2.webp","imagens/cruze/3.webp","imagens/cruze/4.webp","imagens/cruze/5.webp","imagens/cruze/6.webp","imagens/cruze/7.webp","imagens/cruze/8.webp"]},
-  {brand:"Chevrolet",bk:"chevrolet",model:"ONIX 1.4 LT",year:"2016/2017",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:"Vendido",classic:false,img:"imagens/onix.webp",folder:"onix",price:"Vendido",cambio:"",desc:"",photos:["imagens/onix/1.webp","imagens/onix/2.webp","imagens/onix/3.webp","imagens/onix/4.webp","imagens/onix/5.webp","imagens/onix/6.webp","imagens/onix/7.webp","imagens/onix/8.webp"]},
-  {brand:"GM",bk:"chevrolet",model:"CELTA 2P SPIRIT",year:"2007/2008",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/celta.webp",folder:"celta",price:"R$25.000,00",cambio:"Manual",desc:"",photos:["imagens/celta/1.webp","imagens/celta/2.webp","imagens/celta/3.webp","imagens/celta/4.webp","imagens/celta/5.webp","imagens/celta/6.webp","imagens/celta/7.webp","imagens/celta/8.webp"]},
-  {brand:"GM",bk:"chevrolet",model:"CELTA 4P 1.0 LT",year:"2014/2015",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/celta4p.webp",folder:"celta4p",price:"R$38.500,00",cambio:"Manual",desc:"",photos:["imagens/celta4p/1.webp","imagens/celta4p/2.webp","imagens/celta4p/3.webp","imagens/celta4p/4.webp","imagens/celta4p/5.webp","imagens/celta4p/6.webp","imagens/celta4p/7.webp","imagens/celta4p/8.webp"]},
-  {brand:"GM",bk:"chevrolet",model:"MERIVA PREMIUM",year:"2008/2008",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/merivapreto.webp",folder:"merivapreto",price:"R$26.000,00",cambio:"Manual",desc:"",photos:["imagens/merivapreto/1.webp","imagens/merivapreto/2.webp","imagens/merivapreto/3.webp","imagens/merivapreto/4.webp","imagens/merivapreto/5.webp","imagens/merivapreto/6.webp","imagens/merivapreto/7.webp","imagens/merivapreto/8.webp"]},
-  {brand:"GM",bk:"chevrolet",model:"MERIVA PREMIUM",year:"2010/2011",color:"Verde",hex:"#27ae60",fuel:"flex",extra:null,classic:false,img:"imagens/meriva.webp",folder:"meriva",price:"R$35.000,00",cambio:"Manual",desc:"",photos:["imagens/meriva/1.webp","imagens/meriva/2.webp","imagens/meriva/3.webp","imagens/meriva/4.webp","imagens/meriva/5.webp","imagens/meriva/6.webp","imagens/meriva/7.webp","imagens/meriva/8.webp"]},
-  {brand:"GM",bk:"chevrolet",model:"S10 ADVANTAGE S",year:"2009/2009",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:"Vendido",classic:false,img:"imagens/s10.webp",folder:"s10",price:"Vendido",cambio:"",desc:"",photos:["imagens/s10/1.webp","imagens/s10/2.webp","imagens/s10/3.webp","imagens/s10/4.webp","imagens/s10/5.webp","imagens/s10/6.webp","imagens/s10/7.webp","imagens/s10/8.webp"]},
-  {brand:"Fiat",bk:"fiat",model:"PUNTO ATTRACTIVE",year:"2016/2016",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/puntoprata.webp",folder:"puntoprata",price:"R$46.000,00",cambio:"Manual",desc:"",photos:["imagens/puntoprata/1.webp","imagens/puntoprata/2.webp","imagens/puntoprata/3.webp","imagens/puntoprata/4.webp","imagens/puntoprata/5.webp","imagens/puntoprata/6.webp","imagens/puntoprata/7.webp","imagens/puntoprata/8.webp"]},
-  {brand:"Fiat",bk:"fiat",model:"PUNTO ESSENCE 1.6",year:"2011/2012",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/puntoessence.webp",folder:"puntoessence",price:"R$35.000,00",cambio:"Automatico",desc:"",photos:["imagens/puntoessence/1.webp","imagens/puntoessence/2.webp","imagens/puntoessence/3.webp","imagens/puntoessence/4.webp","imagens/puntoessence/5.webp","imagens/puntoessence/6.webp","imagens/puntoessence/7.webp","imagens/puntoessence/8.webp"]},
-  {brand:"Fiat",bk:"fiat",model:"UNO MILLE ECONOMY",year:"2013/2013",color:"Azul Escuro",hex:"#1a3a5c",fuel:"flex",extra:"Vendido",classic:false,img:"imagens/unomille.webp",folder:"unomille",price:"Vendido",cambio:"",desc:"",photos:["imagens/unomille/1.webp","imagens/unomille/2.webp","imagens/unomille/3.webp","imagens/unomille/4.webp","imagens/unomille/5.webp","imagens/unomille/6.webp","imagens/unomille/7.webp","imagens/unomille/8.webp"]},
-  {brand:"Fiat",bk:"fiat",model:"UNO VIVACE 1.0",year:"2010/2011",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/unovivace.webp",folder:"unovivace",price:"R$33.500,00",cambio:"Manual",desc:"",photos:["imagens/unovivace/1.webp","imagens/unovivace/2.webp","imagens/unovivace/3.webp","imagens/unovivace/4.webp","imagens/unovivace/5.webp","imagens/unovivace/6.webp","imagens/unovivace/7.webp","imagens/unovivace/8.webp"]},
-  {brand:"Ford",bk:"ford",model:"FIESTA",year:"2009/2010",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/fiesta.webp",folder:"fiesta",price:"R$32.000,00",cambio:"Manual",desc:"",photos:["imagens/fiesta/1.webp","imagens/fiesta/2.webp","imagens/fiesta/3.webp","imagens/fiesta/4.webp","imagens/fiesta/5.webp","imagens/fiesta/6.webp","imagens/fiesta/7.webp","imagens/fiesta/8.webp"]},
-  {brand:"Ford",bk:"ford",model:"FOCUS TITANIUM 2.0",year:"2014/2015",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:"Vendido",classic:false,img:"imagens/focus.webp",folder:"focus",price:"Vendido",cambio:"",desc:"",photos:["imagens/focus/1.webp","imagens/focus/2.webp","imagens/focus/3.webp","imagens/focus/4.webp","imagens/focus/5.webp","imagens/focus/6.webp","imagens/focus/7.webp","imagens/focus/8.webp"]},
-  {brand:"Ford",bk:"ford",model:"KA 1.0 SEL",year:"2015/2015",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/ka.webp",folder:"ka",price:"R$42.000,00",cambio:"Manual",desc:"",photos:["imagens/ka/1.webp","imagens/ka/2.webp","imagens/ka/3.webp","imagens/ka/4.webp","imagens/ka/5.webp","imagens/ka/6.webp","imagens/ka/7.webp","imagens/ka/8.webp"]},
-  {brand:"Ford",bk:"ford",model:"MAVERICK",year:"1978/1979",color:"Cinza",hex:"#9ba3b0",fuel:"gasolina",extra:null,classic:true,img:"imagens/maverick.webp",folder:"maverick",price:"R$260.000,00",cambio:"Manual",desc:"",photos:["imagens/maverick/1.webp","imagens/maverick/2.webp","imagens/maverick/3.webp","imagens/maverick/4.webp","imagens/maverick/5.webp","imagens/maverick/6.webp","imagens/maverick/7.webp","imagens/maverick/8.webp"]},
-  {brand:"Hyundai",bk:"outros",model:"HB20 1.6",year:"2019/2019",color:"Branca",hex:"#f0f2f5",fuel:"flex",extra:null,classic:false,img:"imagens/hb20.webp",folder:"hb20",price:"",cambio:"",desc:"",photos:["imagens/hb20/1.webp","imagens/hb20/2.webp","imagens/hb20/3.webp","imagens/hb20/4.webp","imagens/hb20/5.webp","imagens/hb20/6.webp","imagens/hb20/7.webp","imagens/hb20/8.webp"]},
-  {brand:"Hyundai",bk:"outros",model:"HR HDB",year:"2012/2013",color:"Branca",hex:"#f0f2f5",fuel:"diesel",extra:null,classic:false,img:"imagens/hyundaihr.webp",folder:"hyundaihr",price:"R$89.900,00",cambio:"Manual",desc:"",photos:["imagens/hyundaihr/1.webp","imagens/hyundaihr/2.webp","imagens/hyundaihr/3.webp","imagens/hyundaihr/4.webp","imagens/hyundaihr/5.webp","imagens/hyundaihr/6.webp","imagens/hyundaihr/7.webp","imagens/hyundaihr/8.webp"]},
-  {brand:"Hyundai",bk:"outros",model:"TUCSON GLSB",year:"2012/2013",color:"Prata",hex:"#c0c8d0",fuel:"gasolina",extra:null,classic:false,img:"imagens/tucson.webp",folder:"tucson",price:"R$50.500,00",cambio:"Automatico",desc:"",photos:["imagens/tucson/1.webp","imagens/tucson/2.webp","imagens/tucson/3.webp","imagens/tucson/4.webp","imagens/tucson/5.webp","imagens/tucson/6.webp","imagens/tucson/7.webp","imagens/tucson/8.webp"]},
-  {brand:"Kia Motors",bk:"outros",model:"UK2500 HD SC",year:"2013/2014",color:"Branca",hex:"#f0f2f5",fuel:"diesel",extra:null,classic:false,img:"imagens/kia.webp",folder:"kia",price:"R$150.000,00",cambio:"Manual",desc:"",photos:["imagens/kia/1.webp","imagens/kia/2.webp","imagens/kia/3.webp","imagens/kia/4.webp","imagens/kia/5.webp","imagens/kia/6.webp","imagens/kia/7.webp","imagens/kia/8.webp"]},
-  {brand:"Mitsubishi",bk:"mitsubishi",model:"ASX 2.0 4WD",year:"2013/2013",color:"Branca",hex:"#f0f2f5",fuel:"flex",extra:null,classic:false,img:"imagens/asx.webp",folder:"asx",price:"R$74.000,00",cambio:"Automatico",desc:"",photos:["imagens/asx/1.webp","imagens/asx/2.webp","imagens/asx/3.webp","imagens/asx/4.webp","imagens/asx/5.webp","imagens/asx/6.webp","imagens/asx/7.webp","imagens/asx/8.webp"]},
-  {brand:"Mitsubishi",bk:"mitsubishi",model:"PAJERO TR4 FLEX HP",year:"2013/2013",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/pajero.webp",folder:"pajero",price:"R$62.000,00",cambio:"Automatico",desc:"",photos:["imagens/pajero/1.webp","imagens/pajero/2.webp","imagens/pajero/3.webp","imagens/pajero/4.webp","imagens/pajero/5.webp","imagens/pajero/6.webp","imagens/pajero/7.webp","imagens/pajero/8.webp"]},
-  {brand:"Peugeot",bk:"outros",model:"504 GRD",year:"1995/1996",color:"Vermelha",hex:"#c0392b",fuel:"diesel",extra:null,classic:true,img:"imagens/peugeot504.webp",folder:"peugeot504",price:"R$50.000,00",cambio:"Manual",desc:"",photos:["imagens/peugeot504/1.webp","imagens/peugeot504/2.webp","imagens/peugeot504/3.webp","imagens/peugeot504/4.webp","imagens/peugeot504/5.webp","imagens/peugeot504/6.webp","imagens/peugeot504/7.webp","imagens/peugeot504/8.webp"]},
-  {brand:"Renault",bk:"outros",model:"DUSTER 16E 4X2",year:"2012/2013",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/duster.webp",folder:"duster",price:"R$49.500,00",cambio:"Automatico",desc:"",photos:["imagens/duster/1.webp","imagens/duster/2.webp","imagens/duster/3.webp","imagens/duster/4.webp","imagens/duster/5.webp","imagens/duster/6.webp","imagens/duster/7.webp","imagens/duster/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"BRASILIA",year:"1978/1978",color:"Branca",hex:"#f0f2f5",fuel:"gasolina",extra:null,classic:true,img:"imagens/brasilia.webp",folder:"brasilia",price:"R$35.000,00",cambio:"Manual",desc:"Dispensa comentarios, esse modelo esta em perfeito estado de conservacao",photos:["imagens/brasilia/1.webp","imagens/brasilia/2.webp","imagens/brasilia/3.webp","imagens/brasilia/4.webp","imagens/brasilia/5.webp","imagens/brasilia/6.webp","imagens/brasilia/7.webp","imagens/brasilia/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"FOX ROCK RIO MB",year:"2015/2016",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/fox.webp",folder:"fox",price:"R$54.000,00",cambio:"Manual",desc:"Perfeito estado, podemos dizer novo",photos:["imagens/fox/1.webp","imagens/fox/2.webp","imagens/fox/3.webp","imagens/fox/4.webp","imagens/fox/5.webp","imagens/fox/6.webp","imagens/fox/7.webp","imagens/fox/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"FUSCA 1500",year:"1972/1972",color:"Verde",hex:"#27ae60",fuel:"gasolina",extra:null,classic:true,img:"imagens/fusca.webp",folder:"fusca",price:"R$68.000,00",cambio:"Manual",desc:"Nostalgia, pintura impecavel, muito bem conservado",photos:["imagens/fusca/1.webp","imagens/fusca/2.webp","imagens/fusca/3.webp","imagens/fusca/4.webp","imagens/fusca/5.webp","imagens/fusca/6.webp","imagens/fusca/7.webp","imagens/fusca/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"GOL 1.8 GLI",year:"1995/1995",color:"Azul",hex:"#2980b9",fuel:"gasolina",extra:null,classic:true,img:"imagens/gol18gli.webp",folder:"gol18gli",price:"R$28.500,00",cambio:"Manual",desc:"",photos:["imagens/gol18gli/1.webp","imagens/gol18gli/2.webp","imagens/gol18gli/3.webp","imagens/gol18gli/4.webp","imagens/gol18gli/5.webp","imagens/gol18gli/6.webp","imagens/gol18gli/7.webp","imagens/gol18gli/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"GOL 1.0 NOVO",year:"2013/2013",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/gol.webp",folder:"gol",price:"R$33.000,00",cambio:"Manual",desc:"",photos:["imagens/gol/1.webp","imagens/gol/2.webp","imagens/gol/3.webp","imagens/gol/4.webp","imagens/gol/5.webp","imagens/gol/6.webp","imagens/gol/7.webp","imagens/gol/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"GOL GLS 2.0 MI",year:"1998/1998",color:"Cinza",hex:"#9ba3b0",fuel:"gasolina",extra:null,classic:true,img:"imagens/golgls2.0.webp",folder:"golgls2.0",price:"R$40.000,00",cambio:"Manual",desc:"",photos:["imagens/golgls2.0/1.webp","imagens/golgls2.0/2.webp","imagens/golgls2.0/3.webp","imagens/golgls2.0/4.webp","imagens/golgls2.0/5.webp","imagens/golgls2.0/6.webp","imagens/golgls2.0/7.webp","imagens/golgls2.0/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"GOL TL",year:"2018/2018",color:"Cinza",hex:"#9ba3b0",fuel:"flex",extra:"Vendido",classic:false,img:"imagens/goltl.webp",folder:"goltl",price:"Vendido",cambio:"",desc:"Carro perfeito, rodas de liga leve aro 18",photos:["imagens/goltl/1.webp","imagens/goltl/2.webp","imagens/goltl/3.webp","imagens/goltl/4.webp","imagens/goltl/5.webp","imagens/goltl/6.webp","imagens/goltl/7.webp","imagens/goltl/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"JETTA HL AE",year:"2016/2016",color:"Branca",hex:"#f0f2f5",fuel:"gasolina",extra:null,classic:false,img:"imagens/jetta.webp",folder:"jetta",price:"R$90.000,00",cambio:"Automatico",desc:"Todos os comandos em perfeito estado, estofamento em couro",photos:["imagens/jetta/1.webp","imagens/jetta/2.webp","imagens/jetta/3.webp","imagens/jetta/4.webp","imagens/jetta/5.webp","imagens/jetta/6.webp","imagens/jetta/7.webp","imagens/jetta/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"KOMBI",year:"2011/2012",color:"Branca",hex:"#f0f2f5",fuel:"flex",extra:null,classic:false,img:"imagens/kombi.webp",folder:"kombi",price:"R$75.000,00",cambio:"KombiHome",desc:"Pronta para pegar a estrada: cama, armarios, ventiladores, mesa, pia, TV",photos:["imagens/kombi/1.webp","imagens/kombi/2.webp","imagens/kombi/3.webp","imagens/kombi/4.webp","imagens/kombi/5.webp","imagens/kombi/6.webp","imagens/kombi/7.webp","imagens/kombi/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"SAVEIRO 1.6 CS",year:"2012/2013",color:"Branca",hex:"#f0f2f5",fuel:"flex",extra:null,classic:false,img:"imagens/saveiro.webp",folder:"saveiro",price:"R$43.000,00",cambio:"Manual",desc:"",photos:["imagens/saveiro/1.webp","imagens/saveiro/2.webp","imagens/saveiro/3.webp","imagens/saveiro/4.webp","imagens/saveiro/5.webp","imagens/saveiro/6.webp","imagens/saveiro/7.webp","imagens/saveiro/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"SAVEIRO 1.6 CS",year:"2011/2011",color:"Prata",hex:"#c0c8d0",fuel:"flex",extra:null,classic:false,img:"imagens/saveiroprata.webp",folder:"saveiroprata",price:"R$38.500,00",cambio:"Manual",desc:"",photos:["imagens/saveiroprata/1.webp","imagens/saveiroprata/2.webp","imagens/saveiroprata/3.webp","imagens/saveiroprata/4.webp","imagens/saveiroprata/5.webp","imagens/saveiroprata/6.webp","imagens/saveiroprata/7.webp","imagens/saveiroprata/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"SAVEIRO 1.6 SURF",year:"2009/2010",color:"Vermelha",hex:"#c0392b",fuel:"flex",extra:null,classic:false,img:"imagens/saveirosurt.webp",folder:"saveirosurt",price:"R$57.000,00",cambio:"Manual",desc:"Rebaixada, motor preparado, para quem gosta de velocidade",photos:["imagens/saveirosurt/1.webp","imagens/saveirosurt/2.webp","imagens/saveirosurt/3.webp","imagens/saveirosurt/4.webp","imagens/saveirosurt/5.webp","imagens/saveirosurt/6.webp","imagens/saveirosurt/7.webp","imagens/saveirosurt/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"SAVEIRO 1.6 MI",year:"1999/1999",color:"Vermelha",hex:"#c0392b",fuel:"gasolina",extra:null,classic:true,img:"imagens/saveiro99.webp",folder:"saveiro99",price:"R$33.000,00",cambio:"Manual",desc:"Muito bem conservada, raridade",photos:["imagens/saveiro99/1.webp","imagens/saveiro99/2.webp","imagens/saveiro99/3.webp","imagens/saveiro99/4.webp","imagens/saveiro99/5.webp","imagens/saveiro99/6.webp","imagens/saveiro99/7.webp","imagens/saveiro99/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"UP 1.0 NOVO",year:"2017/2018",color:"Preta",hex:"#1a1a1a",fuel:"flex",extra:null,classic:false,img:"imagens/up.webp",folder:"up",price:"R$33.000,00",cambio:"Manual",desc:"",photos:["imagens/up/1.webp","imagens/up/2.webp","imagens/up/3.webp","imagens/up/4.webp","imagens/up/5.webp","imagens/up/6.webp","imagens/up/7.webp","imagens/up/8.webp"]},
-  {brand:"Volkswagen",bk:"volkswagen",model:"VOYAGE MPI",year:"2022/2023",color:"Branca",hex:"#f0f2f5",fuel:"flex",extra:null,classic:false,img:"imagens/voyagempi.webp",folder:"voyage",price:"R$55.000,00",cambio:"Manual",desc:"",photos:["imagens/voyage/1.webp","imagens/voyage/2.webp","imagens/voyage/3.webp","imagens/voyage/4.webp","imagens/voyage/5.webp","imagens/voyage/6.webp","imagens/voyage/7.webp","imagens/voyage/8.webp"]},
-  {brand:"Nissan",bk:"outros",model:"VERSA 1.6 SV",year:"2012/2013",color:"Cinza",hex:"#9ba3b0",fuel:"flex",extra:null,classic:false,img:"imagens/versa.webp",folder:"versa",price:"R$55.000,00",cambio:"Automatico",desc:"",photos:["imagens/versa/1.webp","imagens/versa/2.webp","imagens/versa/3.webp","imagens/versa/4.webp","imagens/versa/5.webp","imagens/versa/6.webp","imagens/versa/7.webp","imagens/versa/8.webp"]}
-];
-
-var sliderPos = {};
-var modalPos = 0;
-var modalPhotos = [];
-var curFilter = "todos";
-var curSearch = "";
-
-function getFiltered() {
-  return vehicles.filter(function(v) {
-    var cat = curFilter === "todos" ? true
-      : curFilter === "classico" ? v.classic
-      : curFilter === "vendido" ? v.extra === "Vendido"
-      : v.bk === curFilter;
-    var q = curSearch.toLowerCase();
-    var srch = !q || v.model.toLowerCase().indexOf(q) >= 0
-      || v.brand.toLowerCase().indexOf(q) >= 0
-      || v.color.toLowerCase().indexOf(q) >= 0
-      || v.year.indexOf(q) >= 0
-      || (v.price && v.price.toLowerCase().indexOf(q) >= 0);
-    return cat && srch;
-  });
-}
-
-function buildCard(v, i) {
-  var fl = v.fuel === "diesel" ? "diesel" : v.fuel === "gasolina" ? "gas" : "";
-  var flLabel = v.fuel === "flex" ? "Flex" : v.fuel === "gasolina" ? "Gasolina" : "Diesel";
-  var classic = v.classic ? '<div class="badge-classic">Classico</div>' : "";
-  var vendido = v.extra === "Vendido" ? '<div class="badge-vendido-wrap"><div class="badge-vendido-txt">VENDIDO</div></div>' : "";
-  var extra = "";
-  if (v.extra === "Importado") { extra = '<span class="badge-import">Importado</span>'; }
-  else if (v.extra && v.extra !== "Vendido") { extra = '<span style="font-size:10px;color:var(--gold);font-family:Barlow Condensed,sans-serif">' + v.extra + '</span>'; }
-  var idx = vehicles.indexOf(v);
-  var delay = (i * 0.03).toFixed(2);
-  var photos = v.photos || [v.img];
-  var dots = photos.map(function(_, pi) {
-    return '<button class="slider-dot' + (pi===0?" active":"") + '" onclick="event.stopPropagation();slideTo(' + idx + ',' + pi + ')"></button>';
-  }).join("");
-  var imgs = photos.map(function(src) {
-    return '<img src="' + src + '" alt="' + v.brand + '" loading="lazy" onerror="this.style.display='none'">';
-  }).join("");
-  var showBtns = photos.length > 1 ? "" : "display:none";
-  return '<div class="car-card" onclick="openModal(' + idx + ')" style="animation-delay:' + delay + 's">'
-    + classic + vendido
-    + '<div class="slider-wrap" id="slider-' + idx + '">'
-    + '<div class="slider-track" id="track-' + idx + '">' + imgs + '</div>'
-    + '<button class="slider-btn slider-prev" style="' + showBtns + '" onclick="event.stopPropagation();slideDir(' + idx + ',-1)">&#8249;</button>'
-    + '<button class="slider-btn slider-next" style="' + showBtns + '" onclick="event.stopPropagation();slideDir(' + idx + ',1)">&#8250;</button>'
-    + '<div class="slider-dots">' + (photos.length > 1 ? dots : "") + '</div>'
-    + '</div>'
-    + '<div class="card-overlay"><span class="link-pill">Ver detalhes &rarr;</span></div>'
-    + '<div class="card-body">'
-    + '<div class="card-brand-row"><span class="card-brand">' + v.brand + '</span><span class="card-year">' + v.year + '</span></div>'
-    + '<div class="card-model">' + v.model + '</div>'
-    + (v.price && v.price !== "Vendido" ? '<div class="card-price">' + v.price + '</div>' : '')
-    + '<div class="card-specs">'
-    + '<div><div class="spec-key">Cor</div><div class="spec-val"><span class="cdot" style="background:' + v.hex + '"></span>' + v.color + '</div></div>'
-    + '<div><div class="spec-key">Combustivel</div><div class="spec-val">' + flLabel + '</div></div>'
-    + '</div>'
-    + '<div class="card-foot"><span class="fuel-tag ' + fl + '">' + flLabel + '</span>' + extra + '</div>'
-    + '</div>'
-    + '</div>';
-}
-
-function render() {
-  var list = getFiltered();
-  var g = document.getElementById("carsGrid");
-  if (list.length === 0) {
-    g.innerHTML = '<div class="no-results">Nenhum veiculo encontrado</div>';
-  } else {
-    var h = "";
-    for (var i = 0; i < list.length; i++) { h += buildCard(list[i], i); }
-    g.innerHTML = h;
-  }
-  document.getElementById("countBadge").textContent = list.length;
-}
-
-function slideTo(idx, pos) {
-  var track = document.getElementById("track-" + idx);
-  if (!track) return;
-  var imgs = track.querySelectorAll("img");
-  var visible = [];
-  imgs.forEach(function(img) { if (img.style.display !== "none") visible.push(img); });
-  if (visible.length === 0) return;
-  pos = (pos + visible.length) % visible.length;
-  sliderPos[idx] = pos;
-  track.style.transform = "translateX(-" + (pos * 100) + "%)";
-  var dots = document.querySelectorAll("#slider-" + idx + " .slider-dot");
-  dots.forEach(function(d, i) { d.classList.toggle("active", i === pos); });
-}
-
-function slideDir(idx, dir) { slideTo(idx, (sliderPos[idx] || 0) + dir); }
-
-function openModal(idx) {
-  var v = vehicles[idx];
-  var fl = v.fuel === "flex" ? "Flex" : v.fuel === "gasolina" ? "Gasolina" : "Diesel";
-  modalPhotos = v.photos || [v.img];
-  modalPos = 0;
-  var track = document.getElementById("modalTrack");
-  var dotsEl = document.getElementById("modalDots");
-  track.innerHTML = modalPhotos.map(function(src) {
-    return '<img src="' + src + '" alt="' + v.brand + '" onerror="this.style.display='none'">';
-  }).join("");
-  track.style.transform = "translateX(0)";
-  dotsEl.innerHTML = modalPhotos.map(function(_, i) {
-    return '<button class="modal-dot' + (i===0?" active":"") + '" onclick="modalGoTo(' + i + ')"></button>';
-  }).join("");
-  document.getElementById("mBrand").textContent = v.brand;
-  document.getElementById("mModel").textContent = v.model;
-  var priceEl = document.getElementById("mPrice");
-  priceEl.textContent = v.price || "";
-  priceEl.style.color = v.price === "Vendido" ? "var(--red)" : "var(--gold)";
-  var tipo = v.classic ? "Classico" : (v.cambio || "Nacional");
-  document.getElementById("mSpecs").innerHTML =
-    '<div class="mspec"><div class="mspec-k">Ano</div><div class="mspec-v">' + v.year + '</div></div>'
-    + '<div class="mspec"><div class="mspec-k">Cor</div><div class="mspec-v"><span class="cdot" style="background:' + v.hex + ';width:14px;height:14px"></span>' + v.color + '</div></div>'
-    + '<div class="mspec"><div class="mspec-k">Cambio</div><div class="mspec-v">' + tipo + '</div></div>';
-  var descEl = document.getElementById("mDesc");
-  if (v.desc) { descEl.textContent = v.desc; descEl.style.display = "block"; }
-  else { descEl.style.display = "none"; }
-  var msg = encodeURIComponent("Ola! Vi o catalogo da Neguinho Motors e tenho interesse no " + v.brand + " " + v.model + " ano " + v.year + " na cor " + v.color + ". Poderia me passar mais informacoes?");
-  document.getElementById("mCta").href = "https://wa.me/5513996309256?text=" + msg;
-  document.getElementById("modalBg").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function modalGoTo(pos) {
-  modalPos = pos;
-  document.getElementById("modalTrack").style.transform = "translateX(-" + (pos * 100) + "%)";
-  document.querySelectorAll(".modal-dot").forEach(function(d, i) { d.classList.toggle("active", i === pos); });
-}
-
-function modalSlide(dir) {
-  var newPos = (modalPos + dir + modalPhotos.length) % modalPhotos.length;
-  modalGoTo(newPos);
-}
-
-function closeModal() {
-  document.getElementById("modalBg").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function closeModalClick(e) {
-  if (e.target === document.getElementById("modalBg")) closeModal();
-}
-
-function setFilter(cat, btn) {
-  curFilter = cat;
-  document.querySelectorAll(".filter-btn").forEach(function(b) { b.classList.remove("active"); });
-  document.querySelectorAll("#navLinks a").forEach(function(a) { a.classList.remove("active"); });
-  if (btn) btn.classList.add("active");
-  render();
-  document.getElementById("catalogo").scrollIntoView({behavior:"smooth"});
-}
-
-function doSearch(val) {
-  curSearch = val;
-  document.getElementById("searchMain").value = val;
-  document.getElementById("navSearch").value = val;
-  document.getElementById("searchClear").classList.toggle("visible", val.length > 0);
-  var info = document.getElementById("searchInfo");
-  if (val.trim()) {
-    var c = getFiltered().length;
-    info.innerHTML = "Mostrando <span>" + c + "</span> resultado" + (c !== 1 ? "s" : "") + " para <span>" + val + "</span>";
-  } else { info.innerHTML = ""; }
-  render();
-}
-
-function clearSearch() {
-  curSearch = "";
-  document.getElementById("searchMain").value = "";
-  document.getElementById("navSearch").value = "";
-  document.getElementById("searchClear").classList.remove("visible");
-  document.getElementById("searchInfo").innerHTML = "";
-  render();
-}
-
-function toggleMenu() { document.getElementById("mobileMenu").classList.toggle("open"); }
-function closeMobile() { document.getElementById("mobileMenu").classList.remove("open"); }
-document.addEventListener("keydown", function(e) { if (e.key === "Escape") closeModal(); });
-
-render();
-</script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
