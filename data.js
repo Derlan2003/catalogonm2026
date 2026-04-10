@@ -11,20 +11,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": "Vendido",
     "classic": false,
-    "img": "imagens/bmwx1.webp",
+    "img": "bmwx1/1.webp",
     "folder": "bmwx1",
     "price": "Vendido",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/bmwx1/1.webp",
-      "imagens/bmwx1/2.webp",
-      "imagens/bmwx1/3.webp",
-      "imagens/bmwx1/4.webp",
-      "imagens/bmwx1/5.webp",
-      "imagens/bmwx1/6.webp",
-      "imagens/bmwx1/7.webp",
-      "imagens/bmwx1/8.webp"
+      "bmwx1/1.webp",
+      "bmwx1/2.webp",
+      "bmwx1/3.webp",
+      "bmwx1/4.webp",
+      "bmwx1/5.webp",
+      "bmwx1/6.webp",
+      "bmwx1/7.webp",
+      "bmwx1/8.webp"
     ]
   },
   {
@@ -38,20 +38,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/willys.webp",
+    "img": "willys/1.webp",
     "folder": "willys",
     "price": "R$50.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/willys/1.webp",
-      "imagens/willys/2.webp",
-      "imagens/willys/3.webp",
-      "imagens/willys/4.webp",
-      "imagens/willys/5.webp",
-      "imagens/willys/6.webp",
-      "imagens/willys/7.webp",
-      "imagens/willys/8.webp"
+      "willys/1.webp",
+      "willys/2.webp",
+      "willys/3.webp",
+      "willys/4.webp",
+      "willys/5.webp",
+      "willys/6.webp",
+      "willys/7.webp",
+      "willys/8.webp"
     ]
   },
   {
@@ -65,20 +65,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/agile.webp",
+    "img": "agile/1.webp",
     "folder": "agile",
     "price": "R$38.500,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/agile/1.webp",
-      "imagens/agile/2.webp",
-      "imagens/agile/3.webp",
-      "imagens/agile/4.webp",
-      "imagens/agile/5.webp",
-      "imagens/agile/6.webp",
-      "imagens/agile/7.webp",
-      "imagens/agile/8.webp"
+      "agile/1.webp",
+      "agile/2.webp",
+      "agile/3.webp",
+      "agile/4.webp",
+      "agile/5.webp",
+      "agile/6.webp",
+      "agile/7.webp",
+      "agile/8.webp"
     ]
   },
   {
@@ -92,20 +92,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/astra.webp",
+    "img": "astra/1.webp",
     "folder": "astra",
     "price": "R$40.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/astra/1.webp",
-      "imagens/astra/2.webp",
-      "imagens/astra/3.webp",
-      "imagens/astra/4.webp",
-      "imagens/astra/5.webp",
-      "imagens/astra/6.webp",
-      "imagens/astra/7.webp",
-      "imagens/astra/8.webp"
+      "astra/1.webp",
+      "astra/2.webp",
+      "astra/3.webp",
+      "astra/4.webp",
+      "astra/5.webp",
+      "astra/6.webp",
+      "astra/7.webp",
+      "astra/8.webp"
     ]
   },
   {
@@ -119,20 +119,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/cruze.webp",
+    "img": "cruze/1.webp",
     "folder": "cruze",
     "price": "R$55.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/cruze/1.webp",
-      "imagens/cruze/2.webp",
-      "imagens/cruze/3.webp",
-      "imagens/cruze/4.webp",
-      "imagens/cruze/5.webp",
-      "imagens/cruze/6.webp",
-      "imagens/cruze/7.webp",
-      "imagens/cruze/8.webp"
+      "cruze/1.webp",
+      "cruze/2.webp",
+      "cruze/3.webp",
+      "cruze/4.webp",
+      "cruze/5.webp",
+      "cruze/6.webp",
+      "cruze/7.webp",
+      "cruze/8.webp"
     ]
   },
   {
@@ -146,20 +146,20 @@ const vehicles =
     "fuel": "flex",
     "extra": "Vendido",
     "classic": false,
-    "img": "imagens/onix.webp",
+    "img": "onix/1.webp",
     "folder": "onix",
     "price": "Vendido",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/onix/1.webp",
-      "imagens/onix/2.webp",
-      "imagens/onix/3.webp",
-      "imagens/onix/4.webp",
-      "imagens/onix/5.webp",
-      "imagens/onix/6.webp",
-      "imagens/onix/7.webp",
-      "imagens/onix/8.webp"
+      "onix/1.webp",
+      "onix/2.webp",
+      "onix/3.webp",
+      "onix/4.webp",
+      "onix/5.webp",
+      "onix/6.webp",
+      "onix/7.webp",
+      "onix/8.webp"
     ]
   },
   {
@@ -173,20 +173,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/celta.webp",
+    "img": "celta/1.webp",
     "folder": "celta",
     "price": "R$25.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/celta/1.webp",
-      "imagens/celta/2.webp",
-      "imagens/celta/3.webp",
-      "imagens/celta/4.webp",
-      "imagens/celta/5.webp",
-      "imagens/celta/6.webp",
-      "imagens/celta/7.webp",
-      "imagens/celta/8.webp"
+      "celta/1.webp",
+      "celta/2.webp",
+      "celta/3.webp",
+      "celta/4.webp",
+      "celta/5.webp",
+      "celta/6.webp",
+      "celta/7.webp",
+      "celta/8.webp"
     ]
   },
   {
@@ -200,20 +200,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/merivapreto.webp",
+    "img": "merivapreto/1.webp",
     "folder": "merivapreto",
     "price": "R$26.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/merivapreto/1.webp",
-      "imagens/merivapreto/2.webp",
-      "imagens/merivapreto/3.webp",
-      "imagens/merivapreto/4.webp",
-      "imagens/merivapreto/5.webp",
-      "imagens/merivapreto/6.webp",
-      "imagens/merivapreto/7.webp",
-      "imagens/merivapreto/8.webp"
+      "merivapreto/1.webp",
+      "merivapreto/2.webp",
+      "merivapreto/3.webp",
+      "merivapreto/4.webp",
+      "merivapreto/5.webp",
+      "merivapreto/6.webp",
+      "merivapreto/7.webp",
+      "merivapreto/8.webp"
     ]
   },
   {
@@ -227,20 +227,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/meriva.webp",
+    "img": "meriva/1.webp",
     "folder": "meriva",
     "price": "R$35.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/meriva/1.webp",
-      "imagens/meriva/2.webp",
-      "imagens/meriva/3.webp",
-      "imagens/meriva/4.webp",
-      "imagens/meriva/5.webp",
-      "imagens/meriva/6.webp",
-      "imagens/meriva/7.webp",
-      "imagens/meriva/8.webp"
+      "meriva/1.webp",
+      "meriva/2.webp",
+      "meriva/3.webp",
+      "meriva/4.webp",
+      "meriva/5.webp",
+      "meriva/6.webp",
+      "meriva/7.webp",
+      "meriva/8.webp"
     ]
   },
   {
@@ -254,20 +254,20 @@ const vehicles =
     "fuel": "flex",
     "extra": "Vendido",
     "classic": false,
-    "img": "imagens/s10.webp",
+    "img": "s10/1.webp",
     "folder": "s10",
     "price": "Vendido",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/s10/1.webp",
-      "imagens/s10/2.webp",
-      "imagens/s10/3.webp",
-      "imagens/s10/4.webp",
-      "imagens/s10/5.webp",
-      "imagens/s10/6.webp",
-      "imagens/s10/7.webp",
-      "imagens/s10/8.webp"
+      "s10/1.webp",
+      "s10/2.webp",
+      "s10/3.webp",
+      "s10/4.webp",
+      "s10/5.webp",
+      "s10/6.webp",
+      "s10/7.webp",
+      "s10/8.webp"
     ]
   },
   {
@@ -281,20 +281,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/puntoprata.webp",
+    "img": "puntoprata/1.webp",
     "folder": "puntoprata",
     "price": "R$46.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/puntoprata/1.webp",
-      "imagens/puntoprata/2.webp",
-      "imagens/puntoprata/3.webp",
-      "imagens/puntoprata/4.webp",
-      "imagens/puntoprata/5.webp",
-      "imagens/puntoprata/6.webp",
-      "imagens/puntoprata/7.webp",
-      "imagens/puntoprata/8.webp"
+      "puntoprata/1.webp",
+      "puntoprata/2.webp",
+      "puntoprata/3.webp",
+      "puntoprata/4.webp",
+      "puntoprata/5.webp",
+      "puntoprata/6.webp",
+      "puntoprata/7.webp",
+      "puntoprata/8.webp"
     ]
   },
   {
@@ -308,20 +308,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/puntoessence.webp",
+    "img": "puntopreto/1.webp",
     "folder": "puntopreto",
     "price": "R$35.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/puntopreto/1.webp",
-      "imagens/puntopreto/2.webp",
-      "imagens/puntopreto/3.webp",
-      "imagens/puntopreto/4.webp",
-      "imagens/puntopreto/5.webp",
-      "imagens/puntopreto/6.webp",
-      "imagens/puntopreto/7.webp",
-      "imagens/puntopreto/8.webp"
+      "puntopreto/1.webp",
+      "puntopreto/2.webp",
+      "puntopreto/3.webp",
+      "puntopreto/4.webp",
+      "puntopreto/5.webp",
+      "puntopreto/6.webp",
+      "puntopreto/7.webp",
+      "puntopreto/8.webp"
     ]
   },
   {
@@ -335,20 +335,20 @@ const vehicles =
     "fuel": "flex",
     "extra": "Vendido",
     "classic": false,
-    "img": "imagens/unomille.webp",
+    "img": "unomille/1.webp",
     "folder": "unomille",
     "price": "Vendido",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/unomille/1.webp",
-      "imagens/unomille/2.webp",
-      "imagens/unomille/3.webp",
-      "imagens/unomille/4.webp",
-      "imagens/unomille/5.webp",
-      "imagens/unomille/6.webp",
-      "imagens/unomille/7.webp",
-      "imagens/unomille/8.webp"
+      "unomille/1.webp",
+      "unomille/2.webp",
+      "unomille/3.webp",
+      "unomille/4.webp",
+      "unomille/5.webp",
+      "unomille/6.webp",
+      "unomille/7.webp",
+      "unomille/8.webp"
     ]
   },
   {
@@ -362,20 +362,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/unovivace.webp",
+    "img": "unovivace/1.webp",
     "folder": "unovivace",
     "price": "R$33.500,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/unovivace/1.webp",
-      "imagens/unovivace/2.webp",
-      "imagens/unovivace/3.webp",
-      "imagens/unovivace/4.webp",
-      "imagens/unovivace/5.webp",
-      "imagens/unovivace/6.webp",
-      "imagens/unovivace/7.webp",
-      "imagens/unovivace/8.webp"
+      "unovivace/1.webp",
+      "unovivace/2.webp",
+      "unovivace/3.webp",
+      "unovivace/4.webp",
+      "unovivace/5.webp",
+      "unovivace/6.webp",
+      "unovivace/7.webp",
+      "unovivace/8.webp"
     ]
   },
   {
@@ -389,20 +389,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/fiesta.webp",
+    "img": "fiesta/1.webp",
     "folder": "fiesta",
     "price": "R$32.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/fiesta/1.webp",
-      "imagens/fiesta/2.webp",
-      "imagens/fiesta/3.webp",
-      "imagens/fiesta/4.webp",
-      "imagens/fiesta/5.webp",
-      "imagens/fiesta/6.webp",
-      "imagens/fiesta/7.webp",
-      "imagens/fiesta/8.webp"
+      "fiesta/1.webp",
+      "fiesta/2.webp",
+      "fiesta/3.webp",
+      "fiesta/4.webp",
+      "fiesta/5.webp",
+      "fiesta/6.webp",
+      "fiesta/7.webp",
+      "fiesta/8.webp"
     ]
   },
   {
@@ -416,20 +416,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/focus.webp",
+    "img": "focus/1.webp",
     "folder": "focus",
     "price": "R$ 45.000",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/focus/1.webp",
-      "imagens/focus/2.webp",
-      "imagens/focus/3.webp",
-      "imagens/focus/4.webp",
-      "imagens/focus/5.webp",
-      "imagens/focus/6.webp",
-      "imagens/focus/7.webp",
-      "imagens/focus/8.webp"
+      "focus/1.webp",
+      "focus/2.webp",
+      "focus/3.webp",
+      "focus/4.webp",
+      "focus/5.webp",
+      "focus/6.webp",
+      "focus/7.webp",
+      "focus/8.webp"
     ]
   },
   {
@@ -443,20 +443,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/ka.webp",
+    "img": "ka/1.webp",
     "folder": "ka",
     "price": "R$42.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/ka/1.webp",
-      "imagens/ka/2.webp",
-      "imagens/ka/3.webp",
-      "imagens/ka/4.webp",
-      "imagens/ka/5.webp",
-      "imagens/ka/6.webp",
-      "imagens/ka/7.webp",
-      "imagens/ka/8.webp"
+      "ka/1.webp",
+      "ka/2.webp",
+      "ka/3.webp",
+      "ka/4.webp",
+      "ka/5.webp",
+      "ka/6.webp",
+      "ka/7.webp",
+      "ka/8.webp"
     ]
   },
   {
@@ -470,20 +470,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/maverick.webp",
+    "img": "maverick/1.webp",
     "folder": "maverick",
     "price": "R$260.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/maverick/1.webp",
-      "imagens/maverick/2.webp",
-      "imagens/maverick/3.webp",
-      "imagens/maverick/4.webp",
-      "imagens/maverick/5.webp",
-      "imagens/maverick/6.webp",
-      "imagens/maverick/7.webp",
-      "imagens/maverick/8.webp"
+      "maverick/1.webp",
+      "maverick/2.webp",
+      "maverick/3.webp",
+      "maverick/4.webp",
+      "maverick/5.webp",
+      "maverick/6.webp",
+      "maverick/7.webp",
+      "maverick/8.webp"
     ]
   },
   {
@@ -497,20 +497,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/hb20.webp",
+    "img": "hb20/1.webp",
     "folder": "hb20",
     "price": "",
     "cambio": "",
     "desc": "",
     "photos": [
-      "imagens/hb20/1.webp",
-      "imagens/hb20/2.webp",
-      "imagens/hb20/3.webp",
-      "imagens/hb20/4.webp",
-      "imagens/hb20/5.webp",
-      "imagens/hb20/6.webp",
-      "imagens/hb20/7.webp",
-      "imagens/hb20/8.webp"
+      "hb20/1.webp",
+      "hb20/2.webp",
+      "hb20/3.webp",
+      "hb20/4.webp",
+      "hb20/5.webp",
+      "hb20/6.webp",
+      "hb20/7.webp",
+      "hb20/8.webp"
     ]
   },
   {
@@ -524,20 +524,20 @@ const vehicles =
     "fuel": "diesel",
     "extra": null,
     "classic": false,
-    "img": "imagens/hyundaihr.webp",
+    "img": "hyundaihr/1.webp",
     "folder": "hyundaihr",
     "price": "R$89.900,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/hyundaihr/1.webp",
-      "imagens/hyundaihr/2.webp",
-      "imagens/hyundaihr/3.webp",
-      "imagens/hyundaihr/4.webp",
-      "imagens/hyundaihr/5.webp",
-      "imagens/hyundaihr/6.webp",
-      "imagens/hyundaihr/7.webp",
-      "imagens/hyundaihr/8.webp"
+      "hyundaihr/1.webp",
+      "hyundaihr/2.webp",
+      "hyundaihr/3.webp",
+      "hyundaihr/4.webp",
+      "hyundaihr/5.webp",
+      "hyundaihr/6.webp",
+      "hyundaihr/7.webp",
+      "hyundaihr/8.webp"
     ]
   },
   {
@@ -551,7 +551,7 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": false,
-    "img": "https://d2xsxph8kpxj0f.cloudfront.net/310519663389657681/3zSJVq9qjkbxu9s8RVd9jK/1_fca99f0a.webp",
+    "img": "tucson/1.webp",
     "folder": "tucson",
     "price": "R$50.500,00",
     "cambio": "Automatico",
@@ -573,20 +573,20 @@ const vehicles =
     "fuel": "diesel",
     "extra": null,
     "classic": false,
-    "img": "imagens/kia.webp",
+    "img": "kia/1.webp",
     "folder": "kia",
     "price": "R$150.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/kia/1.webp",
-      "imagens/kia/2.webp",
-      "imagens/kia/3.webp",
-      "imagens/kia/4.webp",
-      "imagens/kia/5.webp",
-      "imagens/kia/6.webp",
-      "imagens/kia/7.webp",
-      "imagens/kia/8.webp"
+      "kia/1.webp",
+      "kia/2.webp",
+      "kia/3.webp",
+      "kia/4.webp",
+      "kia/5.webp",
+      "kia/6.webp",
+      "kia/7.webp",
+      "kia/8.webp"
     ]
   },
   {
@@ -600,20 +600,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/asx.webp",
+    "img": "asx/1.webp",
     "folder": "asx",
     "price": "R$74.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/asx/1.webp",
-      "imagens/asx/2.webp",
-      "imagens/asx/3.webp",
-      "imagens/asx/4.webp",
-      "imagens/asx/5.webp",
-      "imagens/asx/6.webp",
-      "imagens/asx/7.webp",
-      "imagens/asx/8.webp"
+      "asx/1.webp",
+      "asx/2.webp",
+      "asx/3.webp",
+      "asx/4.webp",
+      "asx/5.webp",
+      "asx/6.webp",
+      "asx/7.webp",
+      "asx/8.webp"
     ]
   },
   {
@@ -627,20 +627,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/pajero.webp",
+    "img": "pajero/1.webp",
     "folder": "pajero",
     "price": "R$62.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/pajero/1.webp",
-      "imagens/pajero/2.webp",
-      "imagens/pajero/3.webp",
-      "imagens/pajero/4.webp",
-      "imagens/pajero/5.webp",
-      "imagens/pajero/6.webp",
-      "imagens/pajero/7.webp",
-      "imagens/pajero/8.webp"
+      "pajero/1.webp",
+      "pajero/2.webp",
+      "pajero/3.webp",
+      "pajero/4.webp",
+      "pajero/5.webp",
+      "pajero/6.webp",
+      "pajero/7.webp",
+      "pajero/8.webp"
     ]
   },
   {
@@ -654,20 +654,20 @@ const vehicles =
     "fuel": "diesel",
     "extra": null,
     "classic": true,
-    "img": "imagens/peugeot504.webp",
+    "img": "peugeot504/1.webp",
     "folder": "peugeot504",
     "price": "R$50.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/peugeot504/1.webp",
-      "imagens/peugeot504/2.webp",
-      "imagens/peugeot504/3.webp",
-      "imagens/peugeot504/4.webp",
-      "imagens/peugeot504/5.webp",
-      "imagens/peugeot504/6.webp",
-      "imagens/peugeot504/7.webp",
-      "imagens/peugeot504/8.webp"
+      "peugeot504/1.webp",
+      "peugeot504/2.webp",
+      "peugeot504/3.webp",
+      "peugeot504/4.webp",
+      "peugeot504/5.webp",
+      "peugeot504/6.webp",
+      "peugeot504/7.webp",
+      "peugeot504/8.webp"
     ]
   },
   {
@@ -681,20 +681,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/duster.webp",
+    "img": "duster/1.webp",
     "folder": "duster",
     "price": "R$49.500,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/duster/1.webp",
-      "imagens/duster/2.webp",
-      "imagens/duster/3.webp",
-      "imagens/duster/4.webp",
-      "imagens/duster/5.webp",
-      "imagens/duster/6.webp",
-      "imagens/duster/7.webp",
-      "imagens/duster/8.webp"
+      "duster/1.webp",
+      "duster/2.webp",
+      "duster/3.webp",
+      "duster/4.webp",
+      "duster/5.webp",
+      "duster/6.webp",
+      "duster/7.webp",
+      "duster/8.webp"
     ]
   },
   {
@@ -708,20 +708,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/brasilia.webp",
+    "img": "brasilia/1.webp",
     "folder": "brasilia",
     "price": "R$35.000,00",
     "cambio": "Manual",
     "desc": "Dispensa comentarios, esse modelo esta em perfeito estado de conservacao",
     "photos": [
-      "imagens/brasilia/1.webp",
-      "imagens/brasilia/2.webp",
-      "imagens/brasilia/3.webp",
-      "imagens/brasilia/4.webp",
-      "imagens/brasilia/5.webp",
-      "imagens/brasilia/6.webp",
-      "imagens/brasilia/7.webp",
-      "imagens/brasilia/8.webp"
+      "brasilia/1.webp",
+      "brasilia/2.webp",
+      "brasilia/3.webp",
+      "brasilia/4.webp",
+      "brasilia/5.webp",
+      "brasilia/6.webp",
+      "brasilia/7.webp",
+      "brasilia/8.webp"
     ]
   },
   {
@@ -735,20 +735,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/fox.webp",
+    "img": "fox/1.webp",
     "folder": "fox",
     "price": "R$54.000,00",
     "cambio": "Manual",
     "desc": "Perfeito estado, podemos dizer novo",
     "photos": [
-      "imagens/fox/1.webp",
-      "imagens/fox/2.webp",
-      "imagens/fox/3.webp",
-      "imagens/fox/4.webp",
-      "imagens/fox/5.webp",
-      "imagens/fox/6.webp",
-      "imagens/fox/7.webp",
-      "imagens/fox/8.webp"
+      "fox/1.webp",
+      "fox/2.webp",
+      "fox/3.webp",
+      "fox/4.webp",
+      "fox/5.webp",
+      "fox/6.webp",
+      "fox/7.webp",
+      "fox/8.webp"
     ]
   },
   {
@@ -762,20 +762,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/fusca.webp",
+    "img": "fusca/1.webp",
     "folder": "fusca",
     "price": "R$68.000,00",
     "cambio": "Manual",
     "desc": "Nostalgia, pintura impecavel, muito bem conservado",
     "photos": [
-      "imagens/fusca/1.webp",
-      "imagens/fusca/2.webp",
-      "imagens/fusca/3.webp",
-      "imagens/fusca/4.webp",
-      "imagens/fusca/5.webp",
-      "imagens/fusca/6.webp",
-      "imagens/fusca/7.webp",
-      "imagens/fusca/8.webp"
+      "fusca/1.webp",
+      "fusca/2.webp",
+      "fusca/3.webp",
+      "fusca/4.webp",
+      "fusca/5.webp",
+      "fusca/6.webp",
+      "fusca/7.webp",
+      "fusca/8.webp"
     ]
   },
   {
@@ -789,20 +789,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/gol18gli.webp",
+    "img": "gol18gli/1.webp",
     "folder": "gol18gli",
     "price": "R$28.500,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/gol18gli/1.webp",
-      "imagens/gol18gli/2.webp",
-      "imagens/gol18gli/3.webp",
-      "imagens/gol18gli/4.webp",
-      "imagens/gol18gli/5.webp",
-      "imagens/gol18gli/6.webp",
-      "imagens/gol18gli/7.webp",
-      "imagens/gol18gli/8.webp"
+      "gol18gli/1.webp",
+      "gol18gli/2.webp",
+      "gol18gli/3.webp",
+      "gol18gli/4.webp",
+      "gol18gli/5.webp",
+      "gol18gli/6.webp",
+      "gol18gli/7.webp",
+      "gol18gli/8.webp"
     ]
   },
   {
@@ -816,20 +816,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/gol.webp",
+    "img": "gol/1.webp",
     "folder": "gol",
     "price": "R$33.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/gol/1.webp",
-      "imagens/gol/2.webp",
-      "imagens/gol/3.webp",
-      "imagens/gol/4.webp",
-      "imagens/gol/5.webp",
-      "imagens/gol/6.webp",
-      "imagens/gol/7.webp",
-      "imagens/gol/8.webp"
+      "gol/1.webp",
+      "gol/2.webp",
+      "gol/3.webp",
+      "gol/4.webp",
+      "gol/5.webp",
+      "gol/6.webp",
+      "gol/7.webp",
+      "gol/8.webp"
     ]
   },
   {
@@ -843,20 +843,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/golgls2.0.webp",
+    "img": "golgls2.0/1.webp",
     "folder": "golgls2.0",
     "price": "R$40.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/golgls2.0/1.webp",
-      "imagens/golgls2.0/2.webp",
-      "imagens/golgls2.0/3.webp",
-      "imagens/golgls2.0/4.webp",
-      "imagens/golgls2.0/5.webp",
-      "imagens/golgls2.0/6.webp",
-      "imagens/golgls2.0/7.webp",
-      "imagens/golgls2.0/8.webp"
+      "golgls2.0/1.webp",
+      "golgls2.0/2.webp",
+      "golgls2.0/3.webp",
+      "golgls2.0/4.webp",
+      "golgls2.0/5.webp",
+      "golgls2.0/6.webp",
+      "golgls2.0/7.webp",
+      "golgls2.0/8.webp"
     ]
   },
   {
@@ -870,20 +870,20 @@ const vehicles =
     "fuel": "flex",
     "extra": "Vendido",
     "classic": false,
-    "img": "imagens/goltl.webp",
+    "img": "goltl/1.webp",
     "folder": "goltl",
     "price": "Vendido",
     "cambio": "",
     "desc": "Carro perfeito, rodas de liga leve aro 18",
     "photos": [
-      "imagens/goltl/1.webp",
-      "imagens/goltl/2.webp",
-      "imagens/goltl/3.webp",
-      "imagens/goltl/4.webp",
-      "imagens/goltl/5.webp",
-      "imagens/goltl/6.webp",
-      "imagens/goltl/7.webp",
-      "imagens/goltl/8.webp"
+      "goltl/1.webp",
+      "goltl/2.webp",
+      "goltl/3.webp",
+      "goltl/4.webp",
+      "goltl/5.webp",
+      "goltl/6.webp",
+      "goltl/7.webp",
+      "goltl/8.webp"
     ]
   },
   {
@@ -897,20 +897,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": false,
-    "img": "imagens/jetta.webp",
+    "img": "jetta/1.webp",
     "folder": "jetta",
     "price": "R$90.000,00",
     "cambio": "Automatico",
     "desc": "Todos os comandos em perfeito estado, estofamento em couro",
     "photos": [
-      "imagens/jetta/1.webp",
-      "imagens/jetta/2.webp",
-      "imagens/jetta/3.webp",
-      "imagens/jetta/4.webp",
-      "imagens/jetta/5.webp",
-      "imagens/jetta/6.webp",
-      "imagens/jetta/7.webp",
-      "imagens/jetta/8.webp"
+      "jetta/1.webp",
+      "jetta/2.webp",
+      "jetta/3.webp",
+      "jetta/4.webp",
+      "jetta/5.webp",
+      "jetta/6.webp",
+      "jetta/7.webp",
+      "jetta/8.webp"
     ]
   },
   {
@@ -924,20 +924,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/kombi.webp",
+    "img": "kombi/1.webp",
     "folder": "kombi",
     "price": "R$75.000,00",
     "cambio": "KombiHome",
     "desc": "Pronta para pegar a estrada: cama, armarios, ventiladores, mesa, pia, TV",
     "photos": [
-      "imagens/kombi/1.webp",
-      "imagens/kombi/2.webp",
-      "imagens/kombi/3.webp",
-      "imagens/kombi/4.webp",
-      "imagens/kombi/5.webp",
-      "imagens/kombi/6.webp",
-      "imagens/kombi/7.webp",
-      "imagens/kombi/8.webp"
+      "kombi/1.webp",
+      "kombi/2.webp",
+      "kombi/3.webp",
+      "kombi/4.webp",
+      "kombi/5.webp",
+      "kombi/6.webp",
+      "kombi/7.webp",
+      "kombi/8.webp"
     ]
   },
   {
@@ -951,20 +951,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/saveiro.webp",
+    "img": "saveiro/1.webp",
     "folder": "saveiro",
     "price": "R$43.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/saveiro/1.webp",
-      "imagens/saveiro/2.webp",
-      "imagens/saveiro/3.webp",
-      "imagens/saveiro/4.webp",
-      "imagens/saveiro/5.webp",
-      "imagens/saveiro/6.webp",
-      "imagens/saveiro/7.webp",
-      "imagens/saveiro/8.webp"
+      "saveiro/1.webp",
+      "saveiro/2.webp",
+      "saveiro/3.webp",
+      "saveiro/4.webp",
+      "saveiro/5.webp",
+      "saveiro/6.webp",
+      "saveiro/7.webp",
+      "saveiro/8.webp"
     ]
   },
   {
@@ -978,20 +978,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/saveiroprata.webp",
+    "img": "saveiroprata/1.webp",
     "folder": "saveiroprata",
     "price": "R$38.500,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/saveiroprata/1.webp",
-      "imagens/saveiroprata/2.webp",
-      "imagens/saveiroprata/3.webp",
-      "imagens/saveiroprata/4.webp",
-      "imagens/saveiroprata/5.webp",
-      "imagens/saveiroprata/6.webp",
-      "imagens/saveiroprata/7.webp",
-      "imagens/saveiroprata/8.webp"
+      "saveiroprata/1.webp",
+      "saveiroprata/2.webp",
+      "saveiroprata/3.webp",
+      "saveiroprata/4.webp",
+      "saveiroprata/5.webp",
+      "saveiroprata/6.webp",
+      "saveiroprata/7.webp",
+      "saveiroprata/8.webp"
     ]
   },
   {
@@ -1005,20 +1005,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/saveirosurt.webp",
+    "img": "saveirosurf/1.webp",
     "folder": "saveirosurf",
     "price": "R$57.000,00",
     "cambio": "Manual",
     "desc": "Rebaixada, motor preparado, para quem gosta de velocidade",
     "photos": [
-      "imagens/saveirosurf/1.webp",
-      "imagens/saveirosurf/2.webp",
-      "imagens/saveirosurf/3.webp",
-      "imagens/saveirosurf/4.webp",
-      "imagens/saveirosurf/5.webp",
-      "imagens/saveirosurf/6.webp",
-      "imagens/saveirosurf/7.webp",
-      "imagens/saveirosurf/8.webp"
+      "saveirosurf/1.webp",
+      "saveirosurf/2.webp",
+      "saveirosurf/3.webp",
+      "saveirosurf/4.webp",
+      "saveirosurf/5.webp",
+      "saveirosurf/6.webp",
+      "saveirosurf/7.webp",
+      "saveirosurf/8.webp"
     ]
   },
   {
@@ -1032,20 +1032,20 @@ const vehicles =
     "fuel": "gasolina",
     "extra": null,
     "classic": true,
-    "img": "imagens/saveiro99.webp",
+    "img": "saveiro99/1.webp",
     "folder": "saveiro99",
     "price": "R$33.000,00",
     "cambio": "Manual",
     "desc": "Muito bem conservada, raridade",
     "photos": [
-      "imagens/saveiro99/1.webp",
-      "imagens/saveiro99/2.webp",
-      "imagens/saveiro99/3.webp",
-      "imagens/saveiro99/4.webp",
-      "imagens/saveiro99/5.webp",
-      "imagens/saveiro99/6.webp",
-      "imagens/saveiro99/7.webp",
-      "imagens/saveiro99/8.webp"
+      "saveiro99/1.webp",
+      "saveiro99/2.webp",
+      "saveiro99/3.webp",
+      "saveiro99/4.webp",
+      "saveiro99/5.webp",
+      "saveiro99/6.webp",
+      "saveiro99/7.webp",
+      "saveiro99/8.webp"
     ]
   },
   {
@@ -1059,20 +1059,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/up.webp",
+    "img": "up/1.webp",
     "folder": "up",
     "price": "R$33.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/up/1.webp",
-      "imagens/up/2.webp",
-      "imagens/up/3.webp",
-      "imagens/up/4.webp",
-      "imagens/up/5.webp",
-      "imagens/up/6.webp",
-      "imagens/up/7.webp",
-      "imagens/up/8.webp"
+      "up/1.webp",
+      "up/2.webp",
+      "up/3.webp",
+      "up/4.webp",
+      "up/5.webp",
+      "up/6.webp",
+      "up/7.webp",
+      "up/8.webp"
     ]
   },
   {
@@ -1086,20 +1086,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/voyagempi.webp",
+    "img": "voyage/1.webp",
     "folder": "voyage",
     "price": "R$55.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "imagens/voyage/1.webp",
-      "imagens/voyage/2.webp",
-      "imagens/voyage/3.webp",
-      "imagens/voyage/4.webp",
-      "imagens/voyage/5.webp",
-      "imagens/voyage/6.webp",
-      "imagens/voyage/7.webp",
-      "imagens/voyage/8.webp"
+      "voyage/1.webp",
+      "voyage/2.webp",
+      "voyage/3.webp",
+      "voyage/4.webp",
+      "voyage/5.webp",
+      "voyage/6.webp",
+      "voyage/7.webp",
+      "voyage/8.webp"
     ]
   },
   {
@@ -1113,21 +1113,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "imagens/versa.webp",
+    "img": "versa/1.webp",
     "folder": "versa",
     "price": "R$55.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "imagens/versa/1.webp",
-      "imagens/versa/2.webp",
-      "imagens/versa/3.webp",
-      "imagens/versa/4.webp",
-      "imagens/versa/5.webp",
-      "imagens/versa/6.webp",
-      "imagens/versa/7.webp",
-      "imagens/versa/8.webp"
+      "versa/1.webp",
+      "versa/2.webp",
+      "versa/3.webp",
+      "versa/4.webp",
+      "versa/5.webp",
+      "versa/6.webp",
+      "versa/7.webp",
+      "versa/8.webp"
     ]
   }
 ]
-;
