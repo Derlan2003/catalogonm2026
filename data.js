@@ -557,9 +557,14 @@ const vehicles =
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663389657681/3zSJVq9qjkbxu9s8RVd9jK/1_fca99f0a.webp",
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663389657681/3zSJVq9qjkbxu9s8RVd9jK/3_c71e76a2.webp",
-      "https://d2xsxph8kpxj0f.cloudfront.net/310519663389657681/3zSJVq9qjkbxu9s8RVd9jK/6_6ab7dbdb.webp"
+      "Tucson/1.webp",
+      "Tucson/2.webp",
+      "Tucson/3.webp",
+      "Tucson/4.webp",
+      "Tucson/5.webp",
+      "Tucson/6.webp",
+      "Tucson/7.webp",
+      "Tucson/8.webp"
     ]
   },
   {
