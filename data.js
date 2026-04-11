@@ -281,20 +281,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "puntoprata/1.webp",
-    "folder": "puntoprata",
+    "img": "puntoattractive2016/1.webp",
+    "folder": "puntoattractive2016",
     "price": "R$46.000,00",
     "cambio": "Manual",
     "desc": "",
     "photos": [
-      "puntoprata/1.webp",
-      "puntoprata/2.webp",
-      "puntoprata/3.webp",
-      "puntoprata/4.webp",
-      "puntoprata/5.webp",
-      "puntoprata/6.webp",
-      "puntoprata/7.webp",
-      "puntoprata/8.webp"
+      "puntoattractive2016/1.webp",
+      "puntoattractive2016/2.webp",
+      "puntoattractive2016/3.webp",
+      "puntoattractive2016/4.webp",
+      "puntoattractive2016/5.webp",
+      "puntoattractive2016/6.webp",
+      "puntoattractive2016/7.webp",
+      "puntoattractive2016/8.webp"
     ]
   },
   {
@@ -308,20 +308,20 @@ const vehicles =
     "fuel": "flex",
     "extra": null,
     "classic": false,
-    "img": "puntopreto/1.webp",
-    "folder": "puntopreto",
+    "img": "puntoattractive2011/1.webp",
+    "folder": "puntoattractive2011",
     "price": "R$35.000,00",
     "cambio": "Automatico",
     "desc": "",
     "photos": [
-      "puntopreto/1.webp",
-      "puntopreto/2.webp",
-      "puntopreto/3.webp",
-      "puntopreto/4.webp",
-      "puntopreto/5.webp",
-      "puntopreto/6.webp",
-      "puntopreto/7.webp",
-      "puntopreto/8.webp"
+      "puntoattractive2011/1.webp",
+      "puntoattractive2011/2.webp",
+      "puntoattractive2011/3.webp",
+      "puntoattractive2011/4.webp",
+      "puntoattractive2011/5.webp",
+      "puntoattractive2011/6.webp",
+      "puntoattractive2011/7.webp",
+      "puntoattractive2011/8.webp"
     ]
   },
   {
